@@ -1,7 +1,11 @@
 import Node from "./Node";
 import Tree from "./interfaces/Tree";
+import Comparable from "./interfaces/Comparable";
+import "./globals";
 
-export class BST<T> implements Tree<T> {
+import Person from "./Person";
+
+export class BST<T extends Comparable<T>> implements Tree<T> {
   private _root: Node<T>;
 
   constructor() {
@@ -19,7 +23,9 @@ export class BST<T> implements Tree<T> {
   add(data: T): void {
     this._root = this.insert(this._root, data);
   }
+
   remove(data: T): void {}
+
   find(data: T): Node<T> {
     let searchResult = this.search(this._root, data);
     if (searchResult !== null && searchResult.data !== null) {
@@ -29,9 +35,10 @@ export class BST<T> implements Tree<T> {
     }
     return searchResult;
   }
+
   isPresent(data: T): void {}
 
-  public printTree() {
+  printTree() {
     this.printInorder(this._root);
   }
 
@@ -80,12 +87,12 @@ export class BST<T> implements Tree<T> {
 // bst.add(p2);
 // bst.add(p3);
 // bst.add(p4);
-//
+
 // bst.find(p3);
 // =========================================
 
 // works fine for primitive types
-const bst = new BST();
+const bst = new BST<number>();
 bst.add(50);
 bst.add(30);
 bst.add(20);

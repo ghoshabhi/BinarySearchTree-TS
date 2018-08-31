@@ -1,4 +1,6 @@
-export class Person {
+import Comparable from "./interfaces/Comparable";
+
+export default class Person implements Comparable<Person> {
   private _id: number;
   private _name: string;
   private _age: number;
@@ -31,6 +33,10 @@ export class Person {
     if (newAge) {
       this._age = newAge;
     }
+  }
+
+  compareTo(otherPerson: Person) {
+    return this._id > otherPerson.id ? 1 : this._id < otherPerson.id ? -1 : 0;
   }
 
   prettyPrint() {
