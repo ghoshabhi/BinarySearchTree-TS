@@ -39,6 +39,3 @@ export class Person {
     );
   }
 }
-
-const p = new Person("Abhishek", 22);
-p.prettyPrint();

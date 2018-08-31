@@ -1,11 +1,5 @@
 import Node from "./Node";
-
-interface Tree<T> {
-  add(data: T): void;
-  remove(data: T): void;
-  find(data: T): Node<T>;
-  isPresent(data: T): void;
-}
+import Tree from "./interfaces/Tree";
 
 export class BST<T> implements Tree<T> {
   private _root: Node<T>;
@@ -76,11 +70,22 @@ export class BST<T> implements Tree<T> {
   }
 }
 
+// =========================================
 // const bst = new BST<Person>();
-// bst.add({ name: "Abhishek", age: 22 });
-// bst.add({ name: "Shivan", age: 18 });
+// const p1 = new Person("Person 1", 22);
+// const p2 = new Person("Person 2", 28);
+// const p3 = new Person("Person 3", 26);
+// const p4 = new Person("Person 4", 24);
+// bst.add(p1);
+// bst.add(p2);
+// bst.add(p3);
+// bst.add(p4);
+//
+// bst.find(p3);
+// =========================================
 
-const bst = new BST<number>();
+// works fine for primitive types
+const bst = new BST();
 bst.add(50);
 bst.add(30);
 bst.add(20);
