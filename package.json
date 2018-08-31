@@ -1,0 +1,20 @@
+{
+  "name": "data-structures-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "typescript",
+    "ts",
+    "data-structures"
+  ],
+  "author": "Abhishek Ghosh",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3"
+  }
+}
