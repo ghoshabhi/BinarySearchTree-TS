@@ -1,8 +1,6 @@
-import BST from "./BST";
 import Node from "./Node";
-import Comparable from "./interfaces/Comparable";
 
-class SortedArrayToBST<T extends Comparable<T>> extends BST<T> {
+class SortedArrayToBST<T> {
   convertToBST(arr: T[], start: number, end: number): Node<T> {
     // Base case
     if (start > end) return null;
@@ -27,7 +25,7 @@ class SortedArrayToBST<T extends Comparable<T>> extends BST<T> {
     }
   }
 
-  height(node?: Node<T>): number {
+  height(node: Node<T>): number {
     let minValue = node.data;
     let height = 0;
     if (node !== null) height++;
