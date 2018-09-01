@@ -20,14 +20,14 @@ console.log(bst.printTree());
 console.log("====================================");
 console.log(bst.find(p2));
 console.log("====================================");
-console.log(bst.remove(p4));
-console.log("====================================");
-console.log(bst.printTree());
-console.log("====================================");
-console.log(bst.remove(p2));
-console.log("====================================");
-console.log(bst.printTree());
-console.log("====================================");
+console.log(bst.height());
+// console.log("====================================");
+// console.log(bst.printTree());
+// console.log("====================================");
+// console.log(bst.remove(p2));
+// console.log("====================================");
+// console.log(bst.printTree());
+// console.log("====================================");
 // =========================================
 
 // const bst = new BST<number>();

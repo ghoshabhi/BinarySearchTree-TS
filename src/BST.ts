@@ -26,9 +26,16 @@ export default class BST<T extends Comparable<T>> implements Tree<T> {
     this.root = this.removeAt(this._root, data);
   }
 
-  size(): number {
-    // TODO:
-    return 0;
+  height(): number {
+    let minValue = this._root.data;
+    let height = 0;
+    if (this._root !== null) height++;
+    while (this._root.left) {
+      minValue = this._root.left.data;
+      this._root = this._root.left;
+      height++;
+    }
+    return height;
   }
 
   find(data: T): Node<T> {

@@ -5,5 +5,5 @@ export default interface Tree<T> {
   remove(data: T): void;
   find(data: T): Node<T>;
   remove(data: T): void;
-  size(): number;
+  height(): number;
 }
