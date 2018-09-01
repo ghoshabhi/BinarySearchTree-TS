@@ -17,10 +17,12 @@ bst.add(p5);
 
 console.log("====================================");
 console.log(bst.printTree());
+// console.log("====================================");
+// console.log(bst.find(p2));
 console.log("====================================");
-console.log(bst.find(p2));
+console.log(bst.findMaxValue(bst.root));
 console.log("====================================");
-console.log(bst.height());
+console.log(bst.findMinValue(bst.root));
 // console.log("====================================");
 // console.log(bst.printTree());
 // console.log("====================================");

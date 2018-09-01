@@ -59,15 +59,6 @@ export default class BST<T extends Comparable<T>> implements Tree<T> {
     return this._root === null;
   }
 
-  private findMinValue(root: Node<T>): T {
-    let minValue = root.data;
-    while (root.left) {
-      minValue = root.left.data;
-      root = root.left;
-    }
-    return minValue;
-  }
-
   private removeAt(root: Node<T>, data: T): Node<T> {
     if (this.isEmpty()) return root;
     // Search data which is to be deleted
@@ -127,5 +118,23 @@ export default class BST<T extends Comparable<T>> implements Tree<T> {
       );
       this.printInorder(node.right);
     }
+  }
+
+  findMinValue(root: Node<T>): T {
+    let minValue = root.data;
+    while (root.left) {
+      minValue = root.left.data;
+      root = root.left;
+    }
+    return minValue;
+  }
+
+  findMaxValue(root: Node<T>): T {
+    let maxValue = root.data;
+    while (root.right) {
+      maxValue = root.right.data;
+      root = root.right;
+    }
+    return maxValue;
   }
 }
