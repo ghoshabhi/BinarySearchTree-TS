@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "run-code": "./node_modules/.bin/ts-node src/BST.ts"
+    "run-code": "./node_modules/.bin/ts-node src/index.ts"
   },
   "keywords": [
     "typescript",
