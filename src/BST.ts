@@ -96,8 +96,7 @@ export default class BST<T extends Comparable<T>> implements Tree<T> {
       return node;
     }
 
-    if (data.compareTo(node.data) === 0) return node;
-    if (data.compareTo(node.data) < 0) {
+    if (data.compareTo(node.data) <= 0) {
       node.left = this.insert(node.left, data);
     } else if (data.compareTo(node.data) > 0) {
       node.right = this.insert(node.right, data);
