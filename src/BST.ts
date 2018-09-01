@@ -121,7 +121,6 @@ export default class BST<T extends Comparable<T>> implements Tree<T> {
   private printInorder(node: Node<T>) {
     if (node !== null) {
       this.printInorder(node.left);
-      // console.log(node.data);
       console.log(
         `${
           typeof node.data === "object" ? JSON.stringify(node.data) : node.data

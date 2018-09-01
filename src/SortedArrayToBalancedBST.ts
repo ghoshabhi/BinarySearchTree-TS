@@ -15,7 +15,6 @@ class SortedArrayToBST<T> {
   print(root: Node<T>) {
     if (root !== null) {
       this.print(root.left);
-      // console.log(root.data);
       console.log(
         `${
           typeof root.data === "object" ? JSON.stringify(root.data) : root.data
