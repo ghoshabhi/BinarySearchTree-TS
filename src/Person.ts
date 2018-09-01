@@ -36,7 +36,11 @@ export default class Person implements Comparable<Person> {
   }
 
   compareTo(otherPerson: Person) {
-    return this._id > otherPerson.id ? 1 : this._id < otherPerson.id ? -1 : 0;
+    return this._age > otherPerson.age
+      ? 1
+      : this._age < otherPerson.age
+        ? -1
+        : 0;
   }
 
   prettyPrint() {
