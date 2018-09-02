@@ -15,14 +15,15 @@ bst.add(p3);
 bst.add(p4);
 bst.add(p5);
 
-console.log("====================================");
-console.log(bst.printTree());
+const start = new Date().getTime();
+// console.log("====================================");
+// console.log(bst.printTree());
 // console.log("====================================");
 // console.log(bst.find(p2));
 console.log("====================================");
 console.log(bst.findMaxValue(bst.root));
-console.log("====================================");
-console.log(bst.findMinValue(bst.root));
+// console.log("====================================");
+// console.log(bst.findMinValue(bst.root));
 // console.log("====================================");
 // console.log(bst.printTree());
 // console.log("====================================");
@@ -31,6 +32,8 @@ console.log(bst.findMinValue(bst.root));
 // console.log(bst.printTree());
 // console.log("====================================");
 // =========================================
+const end = new Date().getTime();
+console.log(`time taken: ${(end - start) / 1000}ms`);
 
 // const bst = new BST<number>();
 // bst.add(50);

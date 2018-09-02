@@ -41,6 +41,8 @@ const util = new SortedArrayToBST<number>();
 const sortedArray = [1, 2, 3, 4, 5];
 const start = 0;
 const end = sortedArray.length - 1;
-
+const startTime = new Date().getTime();
 const root: Node<number> = util.convertToBST(sortedArray, start, end);
-console.log(util.height(root));
+const endTime = new Date().getTime();
+console.log(`time taken: ${(endTime - startTime) / 1000}ms`);
+// console.log(util.height(root));
